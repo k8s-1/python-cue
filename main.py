@@ -13,6 +13,9 @@ content = """import (
 
 content += f"someval: \"{prime_service['rest']['url']}\""
 
+if False:
+    content += f"someval: \"{prime_service['rest']['url']}\""
+
 content += """
     }
 }
