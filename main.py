@@ -18,15 +18,15 @@ try:
         another: \"{prime_service['rest']['url']}"
 """
 except Exception:
-    print("Could not parse field into content")
+    pass
 
 
 try:
     content += f"""
-        another: \"{prime_service['rest']['url']}"
+        fail_100: \"{prime_service['TEST']['url']}"
 """
 except Exception:
-    print("Could not parse field into content")
+    pass
 
 
 content += """
