@@ -13,20 +13,25 @@ content = """import (
 
 content += f"someval: \"{prime_service['rest']['url']}\""
 
-try:
-    content += f"""
+
+def add(string: str) -> str:
+    s = ""
+    try:
+        s += string
+
+    except Exception:
+        return
+
+    return s
+
+
+content += add(f"""
         another: \"{prime_service['rest']['url']}"
-"""
-except Exception:
-    pass
+""")
 
-
-try:
-    content += f"""
+content += add(f"""
         fail_100: \"{prime_service['TEST']['url']}"
-"""
-except Exception:
-    pass
+""")
 
 
 content += """
