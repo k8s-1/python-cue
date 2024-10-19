@@ -14,12 +14,20 @@ content = """import (
 content += f"someval: \"{prime_service['rest']['url']}\""
 
 try:
-    content += """
-        123
+    content += f"""
+        another: \"{prime_service['rest']['url']}"
 """
-
 except Exception:
     print("Could not parse field into content")
+
+
+try:
+    content += f"""
+        another: \"{prime_service['rest']['url']}"
+"""
+except Exception:
+    print("Could not parse field into content")
+
 
 content += """
     }
