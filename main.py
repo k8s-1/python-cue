@@ -11,9 +11,7 @@ content = """import (
     #vals: {
         """
 
-content += f"""
-        someval: "{prime_service['rest']['url']}"
-    """
+content += f"someval: \"{prime_service['rest']['url']}\""
 
 content += """
     }
