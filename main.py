@@ -13,8 +13,11 @@ content = """import (
 
 content += f"someval: \"{prime_service['rest']['url']}\""
 
-if False:
-    content += f"someval: \"{prime_service['rest']['url']}\""
+try:
+    content += f"dynamic: \"{prime_service['rest']['url']}\""
+except Exception:
+    pass
+
 
 content += """
     }
