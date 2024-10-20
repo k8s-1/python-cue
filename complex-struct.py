@@ -36,11 +36,12 @@ import re
 
 def json_to_cue(json_str):
     pattern = r'\"(\w+)\":' # strip quotes from key
-    cue_str = re.sub(pattern, r'\1:', json_str) 
+    result = re.sub(pattern, r'\1:', json_str) 
 
     pattern_numeric = r'\"([0-9]+)\"' # strip quotes from numbers
+    result = re.sub(pattern_numeric, r'\1:', json_str) 
 
-    return cue_str
+    return result
 
 cue_format = json_to_cue(json_output)
 print(cue_format)
