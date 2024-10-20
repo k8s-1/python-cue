@@ -22,4 +22,7 @@ containers = data.get('containers')
 
 # Output the 'containers' part as JSON
 json_output = json.dumps(containers, indent=2)
+print("JSON OUTPUT:\n")
 print(f"""containers: {json_output}""")
+
+
