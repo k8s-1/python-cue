@@ -11,7 +11,13 @@ prime_numbers: [2, 3, 5, 7, 11, 13, 17, 19]
 containers:
 - image: nginx
   name: po
-  resources: {}
+  resources: 
+    requests:
+      memory: "64Mi"
+      cpu: "250m"
+    limits:
+      memory: "128Mi"
+      cpu: "500m"
 """
 
 # Load YAML into a Python dictionary
