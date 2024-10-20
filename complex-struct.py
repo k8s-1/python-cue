@@ -38,6 +38,8 @@ def json_to_cue(json_str):
     pattern = r'\"(\w+)\":' # strip quotes from key
     cue_str = re.sub(pattern, r'\1:', json_str) 
 
+    pattern_numeric = r'\"([0-9]+)\"' # strip quotes from numbers
+
     return cue_str
 
 cue_format = json_to_cue(json_output)
