@@ -32,3 +32,14 @@ print("JSON OUTPUT:\n")
 print(f"""containers: {json_output}""")
 
 
+import re
+
+def json_to_cue(json_str):
+    # Regex to find the first double quotes in key-value pairs
+    pattern = r'\"(\w+)\":'
+    
+    # Substitute the first set of quotes
+    return re.sub(pattern, r'\1:', json_str)
+
+cue_format = json_to_cue(json_output)
+print(cue_format)
