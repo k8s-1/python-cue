@@ -39,7 +39,7 @@ def json_to_cue(json_str):
     result = re.sub(pattern, r'\1:', json_str) 
 
     pattern_numeric = r'\"([0-9]+)\"' # strip quotes from numbers
-    result = re.sub(pattern_numeric, r'\1:', json_str) 
+    result = re.sub(pattern_numeric, r'\1', json_str) 
 
     return result
 
