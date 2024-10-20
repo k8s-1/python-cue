@@ -35,6 +35,11 @@ print(f"""containers: {json_output}""")
 import re
 
 def json_to_cue(json_str):
+    patterns = [
+            r'\"(\w+)\":',
+            r'\"([0-9]+)\"'
+    ]
+
     pattern = r'\"(\w+)\":' # strip quotes from key
     result = re.sub(pattern, r'\1:', json_str) 
 
