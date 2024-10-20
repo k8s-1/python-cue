@@ -35,13 +35,16 @@ print(f"""containers: {json_output}""")
 import re
 
 def json_to_cue(json_str):
-    pattern = r'\"(\w+)\":' # strip quotes from key
-    result = re.sub(pattern, r'\1:', json_str) 
-
-    pattern_numeric = r'\"([0-9]+)\"' # strip quotes from numbers
-    result = re.sub(pattern_numeric, r'\1', json_str) 
+    result = re.sub(r'\"(\w+)\":', r'\1:', json_str)
+    result = re.sub(r'\"([0-9]+)\"', r'\1', result)
 
     return result
 
 cue_format = json_to_cue(json_output)
-print(cue_format)
+print(f"""
+
+CUE:
+
+{cue_format}
+
+""")
