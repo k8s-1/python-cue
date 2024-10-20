@@ -36,7 +36,9 @@ import re
 
 def json_to_cue(json_str):
     pattern = r'\"(\w+)\":'
-    return re.sub(pattern, r'\1:', json_str)
+    cue_str = re.sub(pattern, r'\1:', json_str) 
+
+    return cue_str
 
 cue_format = json_to_cue(json_output)
 print(cue_format)
