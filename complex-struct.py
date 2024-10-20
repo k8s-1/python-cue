@@ -13,7 +13,7 @@ containers:
   name: po
   resources: 
     requests:
-      memory: "64Mi"
+      memory: "1000"
       cpu: "250m"
     limits:
       memory: "128Mi"
